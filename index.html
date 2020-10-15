@@ -180,20 +180,22 @@
   </div>
 </template>
 <script>
-  var fireballSize = 22;
-  var wizardSpeed = 3;
-  var wizardWidth = 70;
+  'use strict';
+
+  var FIREBALL_SIZE = 22;
+  var WIZARD_SPEED = 3;
+  var WIZARD_WIDTH = 70;
 
   function getFireballSpeed(windDirection) {
-    return windDirection ? 5 : 2;
+    return windDirection ? 2 : 5;
   }
 
   function getWizardHeight() {
-    return 1.337 * wizardWidth;
+    return 1.337 * WIZARD_WIDTH;
   }
 
   function getWizardX(width) {
-    return ((width / 2) - wizardWidth / 2);
+    return ((width / 2) - WIZARD_WIDTH / 2);
   }
 
   function getWizardY(height) {
